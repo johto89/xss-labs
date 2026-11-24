@@ -328,7 +328,12 @@
                 <span style="color:#64748b">Waiting for IndexedDB to load...</span>
             </div>
 
-            <div class="info-box" style="background: #1e293b;">
+            
+        </div>
+
+        <details class="hints">
+            <summary>Hints (click to expand)</summary>
+<div class="info-box" style="background: #1e293b;">
                 <strong>How IndexedDB XSS works:</strong><br>
                 • Notes are stored in IndexedDB (persists across browser restarts).<br>
                 • On page load, all notes are read from the database.<br>
@@ -336,10 +341,9 @@
                 • If a note contains HTML/JavaScript, it will execute when rendered.<br>
                 • <strong>This is persistent stored XSS</strong> - the payload executes every time the page loads!
             </div>
-        </div>
 
-        <details class="hints">
-            <summary>Hints (click to expand)</summary>
+
+
 <div class="vulnerable-label">VULNERABLE TARGET (IndexedDB XSS)</div>
 <div class="description">
             This lab stores user notes in <strong>IndexedDB</strong> (a full NoSQL database in the browser). 

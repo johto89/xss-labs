@@ -315,7 +315,12 @@
                 <span style="color:#64748b">No messages saved yet...</span>
             </div>
 
-            <div class="info-box" style="background: #1e293b;">
+            
+        </div>
+
+        <details class="hints">
+            <summary>Hints (click to expand)</summary>
+<div class="info-box" style="background: #1e293b;">
                 <strong>How this works:</strong><br>
                 • Messages are saved to <code>localStorage</code> with a timestamp.<br>
                 • On every page load, all messages are read from storage.<br>
@@ -323,10 +328,9 @@
                 • If a message contains HTML/JavaScript, it will execute when displayed.<br>
                 • <strong>This is persistent XSS</strong> - the payload executes every time the page loads, even after browser restart!
             </div>
-        </div>
 
-        <details class="hints">
-            <summary>Hints (click to expand)</summary>
+
+
 <div class="vulnerable-label">VULNERABLE TARGET (Stored XSS)</div>
 <div class="description">
             This lab simulates a "save for later" feature. Data is stored in <code>localStorage</code> and displayed 

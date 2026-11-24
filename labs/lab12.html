@@ -328,7 +328,12 @@
                 <span style="color:#64748b">No data saved in sessionStorage yet...</span>
             </div>
 
-            <div class="info-box" style="background: #1e293b;">
+            
+        </div>
+
+        <details class="hints">
+            <summary>Hints (click to expand)</summary>
+<div class="info-box" style="background: #1e293b;">
                 <strong>How this works:</strong><br>
                 • On page load, the page reads <code>sessionStorage.getItem('storedData')</code><br>
                 • The value is injected into the DOM using <code>innerHTML</code> (VULNERABLE!)<br>
@@ -336,10 +341,9 @@
                 • <strong>This demonstrates XSS on page reload</strong> - every time you reload, the payload executes again!<br>
                 • Close the tab - sessionStorage is cleared (unlike localStorage).
             </div>
-        </div>
 
-        <details class="hints">
-            <summary>Hints (click to expand)</summary>
+
+
 <div class="vulnerable-label">VULNERABLE TARGET (Stored XSS on Reload)</div>
 <div class="description">
             This lab simulates a "session preference" feature. Data is stored in <code>sessionStorage</code> and 

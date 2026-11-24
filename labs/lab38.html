@@ -191,6 +191,10 @@
         <button id="payload6" class="btn-danger">count keystrokes</button>
     </div>
 
+
+
+
+
 <div class="alert-box">
         <strong>TEST:</strong><br>
         1. Click any payload button below<br>
@@ -324,7 +328,6 @@
     document.getElementById('payload5').onclick = function() { setPayload('console.log("Key released: " + event.key + " at " + new Date())'); };
     document.getElementById('payload6').onclick = function() { setPayload('document.getElementById("keyCount").textContent = parseInt(document.getElementById("keyCount").textContent) + 1'); };
 
-    codeInput.value = 'alert("XSS from onkeyup! Type something...")';
 
     var visible = false;
     solutionBtn.onclick = function() {

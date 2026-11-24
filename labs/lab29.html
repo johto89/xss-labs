@@ -187,7 +187,11 @@
         <span>Click a malicious link above, or enter a javascript: URL and click Navigate.</span>
     </div>
 
-    <div class="info" style="background: #dc262620;">
+    
+
+    <details style="margin: 15px 0;">
+        <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+<div class="info" style="background: #dc262620;">
         <strong>HOW javascript: PSEUDO-PROTOCOL WORKS:</strong><br>
         • <code>&lt;a href="javascript:alert('XSS')"&gt;Click&lt;/a&gt;</code> executes when clicked<br>
         • <code>location.href = "javascript:alert('XSS')"</code> also executes the code<br>
@@ -195,8 +199,8 @@
         • <strong>NEVER let users control URLs that use javascript: protocol!</strong>
     </div>
 
-    <details style="margin: 15px 0;">
-        <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+
+
 <div class="info">
         <strong>Malicious Links (click to execute XSS):</strong>
         <div class="link-list">

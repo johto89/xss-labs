@@ -154,7 +154,7 @@
 
     <div class="info">
         <strong>Enter JavaScript Code:</strong>
-        <textarea id="codeInput" rows="3">alert("XSS from onclick!")</textarea>
+        <textarea id="codeInput" rows="3"></textarea>
         <button id="injectBtn" class="btn-danger">Inject onclick</button>
         <button id="resetBtn" class="btn-secondary">Reset Button</button>
     </div>
@@ -171,15 +171,19 @@
         <span>Click a payload button, then click the green button above.</span>
     </div>
 
-    <div class="info" style="background: #dc262620;">
+    
+
+    <details style="margin: 15px 0;">
+        <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+<div class="info" style="background: #dc262620;">
         <strong>HOW IT WORKS:</strong><br>
         • <code>button.onclick = new Function(userCode)</code><br>
         • The code executes when the button is clicked<br>
         • <strong>NEVER set onclick with user-controlled code!</strong>
     </div>
 
-    <details style="margin: 15px 0;">
-        <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+
+
 <div class="info">
         <strong>Click these to inject (THEN click green button):</strong><br>
         <button id="payload1" class="btn-danger">alert XSS</button>
@@ -307,7 +311,6 @@
 
     // Initialize
     targetButton.onclick = function(e) { safeIncrement(); };
-    codeInput.value = 'alert("XSS from onclick! Click the green button!")';
 
     var visible = false;
     solutionBtn.onclick = function() {

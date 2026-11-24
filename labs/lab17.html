@@ -148,7 +148,7 @@
 
     <div class="info">
         <strong>Add Data to sessionStorage:</strong>
-        <textarea id="dataInput" placeholder='Enter your value here'>alert("XSS from search!")</textarea>
+        <textarea id="dataInput" placeholder='Enter your value here'></textarea>
         <button id="addDataBtn" class="btn-success">Add Data</button>
         <button id="clearStorageBtn" class="btn-warning">Clear All</button>
     </div>
@@ -171,18 +171,11 @@
     <details style="margin: 15px 0;">
         <summary style="cursor: pointer; color: #facc15;">Hints</summary>
 <div class="info">
-        <strong>Quick XSS Payloads (click to add):</strong><br>
-        <button id="payload1Btn" class="btn-danger">alert('XSS')</button>
-        <button id="payload2Btn" class="btn-danger">alert(document.cookie)</button>
-        <button id="payload3Btn" class="btn-danger">prompt('Hacked')</button>
-    </div>
-<div class="info">
         <strong>Search Filter (VULNERABLE):</strong>
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="Enter your value here">
             <button id="searchBtn" class="btn-danger">Search (XSS vulnerable)</button>
-            <button id="showAllBtn" class="btn-secondary">Show All</button>
-        </div>
+            <button id="showAllBtn" class="btn-secon
     </div>
 
 <p><strong>Goal:</strong> Add JavaScript code, then search for "alert" to execute it.</p>
@@ -220,6 +213,18 @@
         <p><strong>Fix:</strong> NEVER use eval() with user input.</p>
     </div>
 </div>
+
+<div class="info">
+        <strong>Quick XSS Payloads (click to add):</strong><br>
+        <button id="payload1Btn" class="btn-danger">alert('XSS')</button>
+        <button id="payload2Btn" class="btn-danger">alert(document.cookie)</button>
+        <button id="payload3Btn" class="btn-danger">prompt('Hacked')</button>
+    </div>
+dary">Show All</button>
+        </div>
+
+
+
 
 <script>
     var searchResults = document.getElementById('searchResults');

@@ -143,7 +143,7 @@
 
     <div class="info">
         <strong>Enter JavaScript Code:</strong>
-        <textarea id="codeInput" rows="2">alert("XSS from select onchange!")</textarea>
+        <textarea id="codeInput" rows="2"></textarea>
         <button id="createBtn" class="btn-danger">Create Select with onchange</button>
         <button id="resetBtn" class="btn-secondary">Reset</button>
     </div>
@@ -171,6 +171,8 @@
         <button id="payload3" class="btn-danger">prompt</button>
         <button id="payload4" class="btn-danger">confirm</button>
     </div>
+
+
 
 <div class="alert-box">
         <strong>TEST:</strong><br>
@@ -280,7 +282,6 @@
     document.getElementById('payload3').onclick = function() { setPayload('prompt("XSS Attack! Enter your name:")'); };
     document.getElementById('payload4').onclick = function() { setPayload('confirm("XSS Attack Successful!")'); };
 
-    codeInput.value = 'alert("XSS from select onchange!")';
 
     var visible = false;
     solutionBtn.onclick = function() {

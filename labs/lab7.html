@@ -300,17 +300,21 @@
                 <span style="color:#64748b">No title reflected yet...</span>
             </div>
 
-            <div class="info-box" style="background: #1e293b;">
+            
+        </div>
+
+        <details class="hints">
+            <summary>Hints (click to expand)</summary>
+<div class="info-box" style="background: #1e293b;">
                 <strong>How this works:</strong><br>
                 • The page reads <code>document.title</code> (the browser tab title).<br>
                 • It injects the title into the page using <code>innerHTML</code> (VULNERABLE!).<br>
                 • If the title contains HTML/JavaScript, it will execute when reflected.<br>
                 • In real attacks, the title can be controlled via URL parameters or stored data.
             </div>
-        </div>
 
-        <details class="hints">
-            <summary>Hints (click to expand)</summary>
+
+
 <div class="vulnerable-label">VULNERABLE TARGET (Title Injection)</div>
 <div class="description">
             This lab reads the page title and injects it into the DOM using <code>innerHTML</code> — NO sanitization.<br>

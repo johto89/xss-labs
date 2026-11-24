@@ -154,7 +154,7 @@
 
     <div class="info">
         <strong>Enter JavaScript Code to Execute (will run after delay):</strong>
-        <textarea id="codeInput" rows="3">alert("XSS from setTimeout()!")</textarea>
+        <textarea id="codeInput" rows="3"></textarea>
         
         <div class="delay-control">
             <label>Delay (milliseconds):</label>
@@ -169,11 +169,7 @@
 
     
 
-    <div class="info">
-        <strong>URL Parameter Attack:</strong>
-        <p>Try adding <code>?code=alert('XSS from URL!')</code> to the URL</p>
-        <button id="testUrlBtn" class="btn-secondary">Load Code from URL</button>
-    </div>
+    
 
     <div class="output" id="resultOutput">
         <span>Enter JavaScript code, set delay, and click "Execute setTimeout()".</span>
@@ -182,13 +178,20 @@
     <div class="info" style="background: #dc262620;">
         <strong>HOW setTimeout(codeString) WORKS:</strong><br>
         • <code>setTimeout("alert('XSS')", 1000)</code> executes the string after 1 second<br>
-        • This is IDENTICAL to using <code>eval()</code> - it runs any JavaScript<br>
+        • This is IDENTICAL t
+
+    <details style="margin: 15px 0;">
+        <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+<div class="info">
+        <strong>URL Parameter Attack:</strong>
+        <p>Try adding <code>?code=alert('XSS from URL!')</code> to the URL</p>
+        <button id="testUrlBtn" class="btn-secondary">Load Code from URL</button>
+    </div>
+o using <code>eval()</code> - it runs any JavaScript<br>
         • Attackers can inject malicious code that executes after a delay<br>
         • <strong>NEVER pass user-controlled strings to setTimeout!</strong>
     </div>
 
-    <details style="margin: 15px 0;">
-        <summary style="cursor: pointer; color: #facc15;">Hints</summary>
 <div class="info">
         <strong>Quick Payloads (click to test):</strong><br>
         <button id="payload1" class="btn-danger">alert XSS</button>

@@ -161,7 +161,7 @@
 
     <div class="info">
         <strong>Enter JavaScript Code for onmouseover:</strong>
-        <textarea id="codeInput" rows="3">alert("XSS from onmouseover!")</textarea>
+        <textarea id="codeInput" rows="3"></textarea>
         <button id="injectBtn" class="btn-danger">Inject onmouseover</button>
         <button id="resetBtn" class="btn-secondary">Reset Element</button>
     </div>
@@ -181,7 +181,11 @@
         <span>Click a payload button, then hover over the colored box above.</span>
     </div>
 
-    <div class="info" style="background: #dc262620;">
+    
+
+    <details style="margin: 15px 0;">
+        <summary style="cursor: pointer; color: #facc15;"> Hints</summary>
+<div class="info" style="background: #dc262620;">
         <strong>HOW onmouseover INJECTION WORKS:</strong><br>
         • <code>element.setAttribute('onmouseover', userCode)</code> or <code>element.onmouseover = userCode</code><br>
         • The code executes when the mouse enters the element's area<br>
@@ -189,8 +193,8 @@
         • <strong>NEVER set event handlers with user-controlled strings!</strong>
     </div>
 
-    <details style="margin: 15px 0;">
-        <summary style="cursor: pointer; color: #facc15;"> Hints</summary>
+
+
 <div class="info">
         <strong>Quick Payloads (click to inject - THEN hover over box):</strong><br>
         <button id="payload1" class="btn-danger">alert XSS</button>
@@ -356,7 +360,6 @@ element.addEventListener('mouseover', function() {
     };
 
     // Set default example
-    codeInput.value = 'alert("XSS from onmouseover! Hover over the green box!")';
     
     console.log('Lab #32 Ready - onmouseover Injection XSS');
     console.log('Inject JavaScript into onmouseover, then hover over the box to execute!');

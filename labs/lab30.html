@@ -158,7 +158,11 @@
         <span>Enter a script URL or click a payload button above.</span>
     </div>
 
-    <div class="info" style="background: #dc262620;">
+    
+
+    <details style="margin: 15px 0;">
+        <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+<div class="info" style="background: #dc262620;">
         <strong>HOW DYNAMIC SCRIPT INJECTION WORKS:</strong><br>
         • <code>document.createElement('script')</code> creates a new script element<br>
         • Setting <code>script.src = userInput</code> loads and executes remote code<br>
@@ -166,22 +170,6 @@
         • <strong>NEVER let users control script src attributes!</strong>
     </div>
 
-    <details style="margin: 15px 0;">
-        <summary style="cursor: pointer; color: #facc15;">Hints</summary>
-<div class="info">
-        <strong>Quick Payloads (click to test):</strong><br>
-        <button id="payload1" class="btn-danger">Inline script (data:text/javascript)</button>
-        <button id="payload2" class="btn-danger">Alert via data URL</button>
-        <button id="payload3" class="btn-danger">Alert cookie via data URL</button>
-        <button id="payload4" class="btn-danger">Blob URL script</button>
-    </div>
-
-<div class="alert-box">
-        <strong>TEST:</strong><br>
-        1. Enter a URL to a JavaScript file (or use our mock endpoint)<br>
-        2. Click "Load Script" → The script is executed<br>
-        3. Try the example payloads below
-    </div>
 
 <p>Creating a <code>&lt;script&gt;</code> element with a user-controlled <code>src</code> attribute is EXTREMELY DANGEROUS - the remote script can execute any code!</p>
 
@@ -219,6 +207,24 @@ document.head.appendChild(script);</pre>
         <p><strong>Fix:</strong> Validate and sanitize script URLs. Better yet, never let users control script sources.</p>
     </div>
 </div>
+
+
+">
+        <strong>TEST:</strong><br>
+        1. Enter a URL to a JavaScript file (or use our mock endpoint)<br>
+        2. Click "Load Script" → The script is executed<br>
+        3. Try the example payloads below
+    </div>
+
+<div class="info">
+        <strong>Quick Payloads (click to test):</strong><br>
+        <button id="payload1" class="btn-danger">Inline script (data:text/javascript)</button>
+        <button id="payload2" class="btn-danger">Alert via data URL</button>
+        <button id="payload3" class="btn-danger">Alert cookie via data URL</button>
+        <button id="payload4" class="btn-danger">Blob URL script</button>
+    </div>
+
+<div class="alert-box
 
 <script>
     var scriptsList = document.getElementById('scriptsList');
@@ -382,7 +388,6 @@ document.head.appendChild(script);</pre>
     };
 
     // Set default example
-    scriptUrlInput.value = 'data:text/javascript,alert("XSS from dynamic script src!")';
     
     console.log('Lab #30 Ready - Dynamic <script src> XSS');
     console.log('WARNING: Loading scripts from user-controlled URLs is extremely dangerous!');

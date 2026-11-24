@@ -194,7 +194,11 @@
         <span>Click a payload button to create an input with oninput injection.</span>
     </div>
 
-    <div class="info" style="background: #dc262620;">
+    
+
+    <details style="margin: 15px 0;">
+        <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+<div class="info" style="background: #dc262620;">
         <strong>HOW oninput INJECTION WORKS:</strong><br>
         • <code>&lt;input oninput="alert('XSS')"&gt;</code> executes on every keystroke<br>
         • Attackers can inject code that runs repeatedly as the user types<br>
@@ -202,8 +206,8 @@
         • <strong>NEVER let users control the oninput attribute!</strong>
     </div>
 
-    <details style="margin: 15px 0;">
-        <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+
+
 <div class="info">
         <strong>Quick Payloads (click to inject - then type in input):</strong><br>
         <button id="payload1" class="btn-danger">alert on each key</button>

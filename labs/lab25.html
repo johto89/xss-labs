@@ -153,19 +153,14 @@
 
     <div class="info">
         <strong>Enter JavaScript Code to Execute:</strong>
-        <textarea id="codeInput" rows="4">alert("XSS from eval()!")</textarea>
+        <textarea id="codeInput" rows="4"></textarea>
         <button id="executeBtn" class="btn-danger">eval() - EXECUTE CODE</button>
         <button id="clearBtn" class="btn-secondary">Clear</button>
     </div>
 
     
 
-    <div class="info">
-        <strong>URL Parameter Attack (eval from URL):</strong>
-        <div class="url-demo" id="urlDemo">Current URL: <span id="currentUrl"></span></div>
-        <p>Try adding <code>?code=alert('XSS from URL!')</code> to the URL</p>
-        <button id="testUrlBtn" class="btn-secondary">Test URL Parameter</button>
-    </div>
+    
 
     <div class="output" id="resultOutput">
         <span>Click "Execute eval()" or click a payload button above.</span>
@@ -181,6 +176,13 @@
 
     <details style="margin: 15px 0;">
         <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+<div class="info">
+        <strong>URL Parameter Attack (eval from URL):</strong>
+        <div class="url-demo" id="urlDemo">Current URL: <span id="currentUrl"></span></div>
+        <p>Try adding <code>?code=alert('XSS from URL!')</code> to the URL</p>
+        <button id="testUrlBtn" class="btn-secondary">Test URL Parameter</button>
+    </div>
+
 <div class="info">
         <strong>Quick Payloads (click to test - ALL will execute):</strong><br>
         <button id="payload1" class="btn-danger">alert XSS</button>

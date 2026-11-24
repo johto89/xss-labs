@@ -289,6 +289,13 @@
 
         <details class="hints">
             <summary>Hints (click to expand)</summary>
+<div class="info-box" style="background: #1e293b;">
+                <strong>ℹAbout document.referrer:</strong><br>
+                • When you click a link from another page, <code>document.referrer</code> shows the previous URL.<br>
+                • If you open this page directly or refresh, referrer is empty.<br>
+                • The attack buttons above simulate arriving from a malicious referer URL.
+            </div>
+
 <div class="info-box">
                 <strong>SIMULATE ATTACK: Click these malicious links (they will set a fake referer):</strong><br><br>
                 <button id="attack1Btn" class="btn-danger" style="width: auto; margin: 5px;">Attack 1: img onerror</button>
@@ -299,36 +306,7 @@
                     These buttons simulate arriving from a malicious website with a poisoned Referer URL.
                 </div>
             </div>
-
-<div class="vulnerable-label">VULNERABLE TARGET (Referer Reflection)</div>
-<div class="description">
-            This lab simulates a server that reflects the HTTP <code>Referer</code> header back to the page. 
-            Since we can't control real HTTP headers in frontend, we use <code>document.referrer</code> (the actual referring page) 
-            and inject it using <code>innerHTML</code> — NO sanitization.<br>
-            <strong>Goal:</strong> Execute JavaScript by making the browser send a malicious Referer URL.
-        </div>
-<p><strong>Key Point:</strong> This is a real-world XSS vector. Many websites log or reflect the Referer header without sanitization. Attackers can host malicious pages that inject XSS payloads into the Referer header.</p>
-
-            <div class="referer-demo">
-                <strong>How Referer works in real life:</strong><br>
-                When you click a link from Page A to Page B, the browser sends a <code>Referer</code> header with Page A's URL.
-                A vulnerable server might reflect that header back using <code>innerHTML</code>, causing XSS.
-                <br><br>
-                <strong>Frontend simulation:</strong> We read <code>document.referrer</code> (the actual page that linked here)
-                and reflect it unsafely.
-            </div>
-            
-            <div class="info-box" style="background: #1e293b;">
-                <strong>ℹAbout document.referrer:</strong><br>
-                • When you click a link from another page, <code>document.referrer</code> shows the previous URL.<br>
-                • If you open this page directly or refresh, referrer is empty.<br>
-                • The attack buttons above simulate arriving from a malicious referer URL.
-            </div>
-            <ul>
-                <li>The vulnerable code reads <code>document.referrer</code> and uses <code>innerHTML</code> to render it.</li>
-                <li>In a real attack, an attacker would host a malicious page that links to this vulnerable page.</li>
-                <li>The Referer header would contain the malicious URL, which gets reflected and executed.</li>
-                <li>Click the "Attack" buttons above - they simulate this attack and WILL pop alerts.</li>
+e this attack and WILL pop alerts.</li>
                 <li>Try setting a custom referer with <code>&lt;img src=x onerror=alert(1)&gt;</code> in the URL.</li>
             </ul>
         </details>
@@ -378,6 +356,33 @@ document.getElementById('output').innerHTML = escapeHtml(referer);</pre>
             <p style="color:#888; font-size:12px;">Educational purpose only — runs entirely in your browser.</p>
         </div>
     </div>
+
+
+
+<div class="vulnerable-label">VULNERABLE TARGET (Referer Reflection)</div>
+<div class="description">
+            This lab simulates a server that reflects the HTTP <code>Referer</code> header back to the page. 
+            Since we can't control real HTTP headers in frontend, we use <code>document.referrer</code> (the actual referring page) 
+            and inject it using <code>innerHTML</code> — NO sanitization.<br>
+            <strong>Goal:</strong> Execute JavaScript by making the browser send a malicious Referer URL.
+        </div>
+<p><strong>Key Point:</strong> This is a real-world XSS vector. Many websites log or reflect the Referer header without sanitization. Attackers can host malicious pages that inject XSS payloads into the Referer header.</p>
+
+            <div class="referer-demo">
+                <strong>How Referer works in real life:</strong><br>
+                When you click a link from Page A to Page B, the browser sends a <code>Referer</code> header with Page A's URL.
+                A vulnerable server might reflect that header back using <code>innerHTML</code>, causing XSS.
+                <br><br>
+                <strong>Frontend simulation:</strong> We read <code>document.referrer</code> (the actual page that linked here)
+                and reflect it unsafely.
+            </div>
+            
+            
+            <ul>
+                <li>The vulnerable code reads <code>document.referrer</code> and uses <code>innerHTML</code> to render it.</li>
+                <li>In a real attack, an attacker would host a malicious page that links to this vulnerable page.</li>
+                <li>The Referer header would contain the malicious URL, which gets reflected and executed.</li>
+                <li>Click the "Attack" buttons above - they simulat
 
     <div class="footer">
         ⚡ XSS-Labs | Lab #4: Referer Header Reflection (document.referrer)

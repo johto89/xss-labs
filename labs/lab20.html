@@ -137,7 +137,7 @@
 
     <div class="info">
         <strong>Encode & Store JavaScript in Base64:</strong>
-        <textarea id="payloadInput" placeholder='Enter your value here'>alert("XSS from Base64!")</textarea>
+        <textarea id="payloadInput" placeholder='Enter your value here'></textarea>
         <button id="encodeStoreBtn" class="btn-success">Encode & Store in localStorage</button>
         <button id="clearBtn" class="btn-warning">Clear Stored Data</button>
     </div>
@@ -172,6 +172,8 @@
         <button id="payload3Btn" class="btn-danger">prompt('Hacked!')</button>
         <button id="payload4Btn" class="btn-danger">confirm('XSS Attack')</button>
     </div>
+
+
 
 <p><strong>Goal:</strong> Encode JavaScript in Base64, store it, then decode and execute it.</p>
 <div class="alert-box">

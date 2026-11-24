@@ -322,7 +322,12 @@
                 <span style="color:#64748b">No cookie to reflect...</span>
             </div>
 
-            <div class="info-box" style="background: #1e293b;">
+            
+        </div>
+
+        <details class="hints">
+            <summary>Hints (click to expand)</summary>
+<div class="info-box" style="background: #1e293b;">
                 <strong>How Cookie XSS works:</strong><br>
                 • On page load, the page reads <code>document.cookie</code> to get the "userPref" cookie.<br>
                 • The cookie value is injected into the DOM using <code>innerHTML</code> (VULNERABLE!)<br>
@@ -330,10 +335,9 @@
                 • <strong>This is persistent stored XSS</strong> - the payload executes every time the page loads!<br>
                 • Cookies persist across browser sessions and can be shared across subdomains.
             </div>
-        </div>
 
-        <details class="hints">
-            <summary>Hints (click to expand)</summary>
+
+
 <div class="vulnerable-label">VULNERABLE TARGET (Cookie XSS)</div>
 <div class="description">
             This lab stores user data in <strong>cookies</strong>. The cookie value is read on page load 

@@ -174,7 +174,7 @@
 
     <div class="info">
         <strong>Enter JavaScript Code for onsubmit:</strong>
-        <textarea id="codeInput" rows="2">alert("XSS from form onsubmit!")</textarea>
+        <textarea id="codeInput" rows="2"></textarea>
         <button id="createBtn" class="btn-danger">Create Form with onsubmit</button>
         <button id="resetBtn" class="btn-secondary">Reset</button>
     </div>
@@ -204,6 +204,10 @@
         <button id="payload5" class="btn-danger">show form data</button>
         <button id="payload6" class="btn-danger">validate & stop</button>
     </div>
+
+
+
+
 
 <div class="alert-box">
         <strong>TEST:</strong><br>
@@ -368,7 +372,6 @@
     document.getElementById('payload5').onclick = function() { setPayload('alert("Name: " + this.name.value + ", Email: " + this.email.value)'); };
     document.getElementById('payload6').onclick = function() { setPayload('alert("Validation failed! Form not submitted."); return false'); };
 
-    codeInput.value = 'alert("XSS from form onsubmit!")';
 
     var visible = false;
     solutionBtn.onclick = function() {

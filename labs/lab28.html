@@ -144,7 +144,7 @@
 
     <div class="info">
         <strong>Enter JavaScript Code Body (will become function body):</strong>
-        <textarea id="codeInput" rows="4">alert("XSS from Function() constructor!")</textarea>
+        <textarea id="codeInput" rows="4"></textarea>
         
         <div class="param-control">
             <label>Function Parameters (comma separated):</label>
@@ -168,7 +168,11 @@
         <span>Click a button above to create and execute a Function() from string.</span>
     </div>
 
-    <div class="info" style="background: #dc262620;">
+    
+
+    <details style="margin: 15px 0;">
+        <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+<div class="info" style="background: #dc262620;">
         <strong>HOW Function() CONSTRUCTOR WORKS:</strong><br>
         • <code>new Function('a', 'b', 'return a + b')</code> creates a function from strings<br>
         • <code>new Function('alert("XSS")')()</code> executes the code immediately<br>
@@ -176,8 +180,8 @@
         • <strong>NEVER pass user-controlled strings to Function() constructor!</strong>
     </div>
 
-    <details style="margin: 15px 0;">
-        <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+
+
 <div class="info">
         <strong>Quick Payloads (click to test):</strong><br>
         <button id="payload1" class="btn-danger">alert XSS</button>

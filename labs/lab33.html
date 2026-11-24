@@ -156,7 +156,7 @@
 
     <div class="info">
         <strong>Enter JavaScript Code for onerror:</strong>
-        <textarea id="codeInput" rows="3">alert("XSS from img onerror!")</textarea>
+        <textarea id="codeInput" rows="3"></textarea>
         <button id="injectBtn" class="btn-danger">Inject onerror into Image</button>
         <button id="resetBtn" class="btn-secondary">Reset Image</button>
     </div>
@@ -176,7 +176,11 @@
         <span>Click a payload button, then watch the image's onerror execute your code!</span>
     </div>
 
-    <div class="info" style="background: #dc262620;">
+    
+
+    <details style="margin: 15px 0;">
+        <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+<div class="info" style="background: #dc262620;">
         <strong>HOW img onerror INJECTION WORKS:</strong><br>
         • <code>&lt;img src="invalid.jpg" onerror="alert('XSS')"&gt;</code><br>
         • When the image fails to load, the onerror event executes the JavaScript<br>
@@ -184,8 +188,8 @@
         • <strong>NEVER let users control the onerror attribute!</strong>
     </div>
 
-    <details style="margin: 15px 0;">
-        <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+
+
 <div class="info">
         <strong>Quick Payloads (click to inject - code executes immediately):</strong><br>
         <button id="payload1" class="btn-danger">alert XSS</button>
@@ -357,7 +361,6 @@ img.setAttribute('onerror', userCode);  // DANGEROUS!</pre>
     };
 
     // Set default example
-    codeInput.value = 'alert("XSS from image onerror! The image failed to load.")';
     
     console.log('Lab #33 Ready - img onerror Injection XSS');
     console.log('The image has an invalid src. When it fails, onerror executes your code!');
