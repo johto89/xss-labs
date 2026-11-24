@@ -281,15 +281,7 @@
             
             
             <!-- localStorage Controls -->
-            <div class="info-box">
-                <strong>localStorage Controls (key: "userData"):</strong><br><br>
-                <button id="setNormal" class="btn-success">Set Normal Value (JohnDoe)</button>
-                <button id="setXSS1" class="btn-danger">Set XSS: img onerror</button>
-                <button id="setXSS2" class="btn-danger">Set XSS: body onload</button>
-                <button id="setXSS3" class="btn-danger">Set XSS: svg onload</button>
-                <button id="deleteKey" class="btn-secondary">Delete Key</button>
-                <button id="clearAll" class="btn-warning">Clear All localStorage</button>
-            </div>
+            
 
             <!-- Custom Value Input -->
             <div class="info-box">
@@ -299,12 +291,7 @@
             </div>
 
             <!-- Custom Key Input (to demonstrate any key reflection) -->
-            <div class="info-box">
-                <strong>Set ANY localStorage key (demonstrate key reflection):</strong>
-                <input type="text" id="customKey" placeholder="Key name" value="maliciousData">
-                <input type="text" id="customKeyValue" placeholder="Enter your value here">
-                <button id="setAnyKey" class="btn-success" style="margin-top: 10px;">Set Custom Key/Value</button>
-            </div>
+            
 
             <!-- All localStorage Keys Display -->
             <div class="info-box">
@@ -324,6 +311,23 @@
 
         <details class="hints">
             <summary>Hints (click to expand)</summary>
+<div class="info-box">
+                <strong>Set ANY localStorage key (demonstrate key reflection):</strong>
+                <input type="text" id="customKey" placeholder="Key name" value="maliciousData">
+                <input type="text" id="customKeyValue" placeholder="Enter your value here">
+                <button id="setAnyKey" class="btn-success" style="margin-top: 10px;">Set Custom Key/Value</button>
+            </div>
+
+<div class="info-box">
+                <strong>localStorage Controls (key: "userData"):</strong><br><br>
+                <button id="setNormal" class="btn-success">Set Normal Value (JohnDoe)</button>
+                <button id="setXSS1" class="btn-danger">Set XSS: img onerror</button>
+                <button id="setXSS2" class="btn-danger">Set XSS: body onload</button>
+                <button id="setXSS3" class="btn-danger">Set XSS: svg onload</button>
+                <button id="deleteKey" class="btn-secondary">Delete Key</button>
+                <button id="clearAll" class="btn-warning">Clear All localStorage</button>
+            </div>
+
 <div class="info-box" style="background: #1e293b;">
                 <strong>How this works:</strong><br>
                 • The page reads <code>localStorage.getItem('userData')</code><br>

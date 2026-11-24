@@ -271,14 +271,7 @@
             
             
             <!-- Title Controls -->
-            <div class="info-box">
-                <strong>Title Controls:</strong><br><br>
-                <button id="setNormalTitle" class="btn-success">Set Normal Title (Welcome to XSS Lab)</button>
-                <button id="setXSS1" class="btn-danger">Set XSS: img onerror</button>
-                <button id="setXSS2" class="btn-danger">Set XSS: body onload</button>
-                <button id="setXSS3" class="btn-danger">Set XSS: svg onload</button>
-                <button id="resetTitle" class="btn-secondary">Reset Title</button>
-            </div>
+            
 
             <!-- Custom Title Input -->
             <div class="info-box">
@@ -305,6 +298,15 @@
 
         <details class="hints">
             <summary>Hints (click to expand)</summary>
+<div class="info-box">
+                <strong>Title Controls:</strong><br><br>
+                <button id="setNormalTitle" class="btn-success">Set Normal Title (Welcome to XSS Lab)</button>
+                <button id="setXSS1" class="btn-danger">Set XSS: img onerror</button>
+                <button id="setXSS2" class="btn-danger">Set XSS: body onload</button>
+                <button id="setXSS3" class="btn-danger">Set XSS: svg onload</button>
+                <button id="resetTitle" class="btn-secondary">Reset Title</button>
+            </div>
+
 <div class="info-box" style="background: #1e293b;">
                 <strong>How this works:</strong><br>
                 • The page reads <code>document.title</code> (the browser tab title).<br>
