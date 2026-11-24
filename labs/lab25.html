@@ -177,13 +177,6 @@
     <details style="margin: 15px 0;">
         <summary style="cursor: pointer; color: #facc15;">Hints</summary>
 <div class="info">
-        <strong>URL Parameter Attack (eval from URL):</strong>
-        <div class="url-demo" id="urlDemo">Current URL: <span id="currentUrl"></span></div>
-        <p>Try adding <code>?code=alert('XSS from URL!')</code> to the URL</p>
-        <button id="testUrlBtn" class="btn-secondary">Test URL Parameter</button>
-    </div>
-
-<div class="info">
         <strong>Quick Payloads (click to test - ALL will execute):</strong><br>
         <button id="payload1" class="btn-danger">alert XSS</button>
         <button id="payload2" class="btn-danger">alert cookie</button>
@@ -192,6 +185,15 @@
         <button id="payload5" class="btn-danger">change page title</button>
         <button id="payload6" class="btn-danger">change background</button>
     </div>
+
+<div class="info">
+        <strong>URL Parameter Attack (eval from URL):</strong>
+        <div class="url-demo" id="urlDemo">Current URL: <span id="currentUrl"></span></div>
+        <p>Try adding <code>?code=alert('XSS from URL!')</code> to the URL</p>
+        <button id="testUrlBtn" class="btn-secondary">Test URL Parameter</button>
+    </div>
+
+
 
 <div class="alert-box">
         <strong>TEST:</strong><br>

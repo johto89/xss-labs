@@ -291,15 +291,7 @@
             
             
             <!-- Cookie Controls -->
-            <div class="info-box">
-                <strong>Cookie Controls (key: "userPref"):</strong><br><br>
-                <button id="setNormalCookie" class="btn-success">Set Normal Cookie (GuestUser)</button>
-                <button id="setXSSCookie1" class="btn-danger">Set XSS: img onerror</button>
-                <button id="setXSSCookie2" class="btn-danger">Set XSS: body onload</button>
-                <button id="setXSSCookie3" class="btn-danger">Set XSS: svg onload</button>
-                <button id="deleteCookieBtn" class="btn-secondary">Delete Cookie</button>
-                <button id="reloadPageBtn" class="btn-warning">Reload Page (XSS triggers again!)</button>
-            </div>
+            
 
             <!-- Custom Cookie Input -->
             <div class="info-box">
@@ -327,6 +319,16 @@
 
         <details class="hints">
             <summary>Hints (click to expand)</summary>
+<div class="info-box">
+                <strong>Cookie Controls (key: "userPref"):</strong><br><br>
+                <button id="setNormalCookie" class="btn-success">Set Normal Cookie (GuestUser)</button>
+                <button id="setXSSCookie1" class="btn-danger">Set XSS: img onerror</button>
+                <button id="setXSSCookie2" class="btn-danger">Set XSS: body onload</button>
+                <button id="setXSSCookie3" class="btn-danger">Set XSS: svg onload</button>
+                <button id="deleteCookieBtn" class="btn-secondary">Delete Cookie</button>
+                <button id="reloadPageBtn" class="btn-warning">Reload Page (XSS triggers again!)</button>
+            </div>
+
 <div class="info-box" style="background: #1e293b;">
                 <strong>How Cookie XSS works:</strong><br>
                 • On page load, the page reads <code>document.cookie</code> to get the "userPref" cookie.<br>

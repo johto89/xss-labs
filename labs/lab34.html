@@ -168,6 +168,16 @@
 
     <details style="margin: 15px 0;">
         <summary style="cursor: pointer; color: #facc15;"> Hints</summary>
+<div class="info">
+        <strong>Quick Payloads (click to inject - executes immediately):</strong><br>
+        <button id="payload1" class="btn-danger">alert XSS</button>
+        <button id="payload2" class="btn-danger">alert cookie</button>
+        <button id="payload3" class="btn-danger">prompt</button>
+        <button id="payload4" class="btn-danger">confirm</button>
+        <button id="payload5" class="btn-danger">change background</button>
+        <button id="payload6" class="btn-danger">change title</button>
+    </div>
+
 <div class="info" style="background: #dc262620;">
         <strong>HOW body onload INJECTION WORKS:</strong><br>
         • <code>&lt;body onload="alert('XSS')"&gt;</code> executes when page loads<br>
@@ -220,15 +230,7 @@ document.body.setAttribute('onload', userCode);  // DANGEROUS!</pre>
         <button id="injectBtn" class="btn-danger">Inject & Simulate onload</button>
         <button id="resetBtn" class="btn-secondary">Reset</button>
     </div>
-<div class="info">
-        <strong>Quick Payloads (click to inject - executes immediately):</strong><br>
-        <button id="payload1" class="btn-danger">alert XSS</button>
-        <button id="payload2" class="btn-danger">alert cookie</button>
-        <button id="payload3" class="btn-danger">prompt</button>
-        <button id="payload4" class="btn-danger">confirm</button>
-        <button id="payload5" class="btn-danger">change background</button>
-        <button id="payload6" class="btn-danger">change title</button>
-    </div>
+
 <div class="info">
         <strong>Simulated Body onload:</strong>
         <div class="body-preview" id="bodyPreview">

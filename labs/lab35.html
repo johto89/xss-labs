@@ -190,6 +190,16 @@
 
     <details style="margin: 15px 0;">
         <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+<div class="info">
+        <strong>Quick Payloads (click to inject - executes on focus):</strong><br>
+        <button id="payload1" class="btn-danger">alert XSS</button>
+        <button id="payload2" class="btn-danger">alert cookie</button>
+        <button id="payload3" class="btn-danger">prompt</button>
+        <button id="payload4" class="btn-danger">confirm</button>
+        <button id="payload5" class="btn-danger">change background</button>
+        <button id="payload6" class="btn-danger">this.value</button>
+    </div>
+
 <div class="info" style="background: #dc262620;">
         <strong>HOW onfocus + autofocus WORKS:</strong><br>
         • <code>&lt;input onfocus="alert('XSS')" autofocus&gt;</code><br>
@@ -241,15 +251,7 @@ input.setAttribute('autofocus', 'autofocus');  // Triggers automatically!</pre>
         3. Your code executes immediately when the field receives focus!
     </div>
 
-<div class="info">
-        <strong>Quick Payloads (click to inject - executes on focus):</strong><br>
-        <button id="payload1" class="btn-danger">alert XSS</button>
-        <button id="payload2" class="btn-danger">alert cookie</button>
-        <button id="payload3" class="btn-danger">prompt</button>
-        <button id="payload4" class="btn-danger">confirm</button>
-        <button id="payload5" class="btn-danger">change background</button>
-        <button id="payload6" class="btn-danger">this.value</button>
-    </div>
+
 
 
 

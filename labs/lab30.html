@@ -162,6 +162,14 @@
 
     <details style="margin: 15px 0;">
         <summary style="cursor: pointer; color: #facc15;">Hints</summary>
+<div class="info">
+        <strong>Quick Payloads (click to test):</strong><br>
+        <button id="payload1" class="btn-danger">Inline script (data:text/javascript)</button>
+        <button id="payload2" class="btn-danger">Alert via data URL</button>
+        <button id="payload3" class="btn-danger">Alert cookie via data URL</button>
+        <button id="payload4" class="btn-danger">Blob URL script</button>
+    </div>
+
 <div class="info" style="background: #dc262620;">
         <strong>HOW DYNAMIC SCRIPT INJECTION WORKS:</strong><br>
         • <code>document.createElement('script')</code> creates a new script element<br>
@@ -216,13 +224,7 @@ document.head.appendChild(script);</pre>
         3. Try the example payloads below
     </div>
 
-<div class="info">
-        <strong>Quick Payloads (click to test):</strong><br>
-        <button id="payload1" class="btn-danger">Inline script (data:text/javascript)</button>
-        <button id="payload2" class="btn-danger">Alert via data URL</button>
-        <button id="payload3" class="btn-danger">Alert cookie via data URL</button>
-        <button id="payload4" class="btn-danger">Blob URL script</button>
-    </div>
+
 
 <div class="alert-box
 

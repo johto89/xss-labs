@@ -289,13 +289,6 @@
 
         <details class="hints">
             <summary>Hints (click to expand)</summary>
-<div class="info-box" style="background: #1e293b;">
-                <strong>ℹAbout document.referrer:</strong><br>
-                • When you click a link from another page, <code>document.referrer</code> shows the previous URL.<br>
-                • If you open this page directly or refresh, referrer is empty.<br>
-                • The attack buttons above simulate arriving from a malicious referer URL.
-            </div>
-
 <div class="info-box">
                 <strong>SIMULATE ATTACK: Click these malicious links (they will set a fake referer):</strong><br><br>
                 <button id="attack1Btn" class="btn-danger" style="width: auto; margin: 5px;">Attack 1: img onerror</button>
@@ -306,6 +299,15 @@
                     These buttons simulate arriving from a malicious website with a poisoned Referer URL.
                 </div>
             </div>
+
+<div class="info-box" style="background: #1e293b;">
+                <strong>ℹAbout document.referrer:</strong><br>
+                • When you click a link from another page, <code>document.referrer</code> shows the previous URL.<br>
+                • If you open this page directly or refresh, referrer is empty.<br>
+                • The attack buttons above simulate arriving from a malicious referer URL.
+            </div>
+
+
 e this attack and WILL pop alerts.</li>
                 <li>Try setting a custom referer with <code>&lt;img src=x onerror=alert(1)&gt;</code> in the URL.</li>
             </ul>

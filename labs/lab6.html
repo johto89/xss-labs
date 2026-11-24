@@ -129,14 +129,7 @@
     
 
     <!-- Storage Controls -->
-    <div class="info">
-        <strong>localStorage Controls:</strong><br><br>
-        <button id="setNormal" class="btn-success">Set Normal Value (name=John)</button>
-        <button id="setXSS1" class="btn-danger">Set XSS: img onerror</button>
-        <button id="setXSS2" class="btn-danger">Set XSS: body onload</button>
-        <button id="setXSS3" class="btn-danger">Set XSS: svg onload</button>
-        <button id="deleteValue" class="btn-secondary">Delete Value</button>
-    </div>
+    
 
     <!-- Custom Value -->
     <div class="info">
@@ -158,7 +151,15 @@
 
     <details style="margin: 15px 0;">
         <summary style="cursor: pointer; color: #facc15;">Hints</summary>
-<p><strong>Goal:</strong> Execute JavaScript by setting a malicious localStorage value.</p>
+<div class="info">
+        <strong>localStorage Controls:</strong><br><br>
+        <button id="setNormal" class="btn-success">Set Normal Value (name=John)</button>
+        <button id="setXSS1" class="btn-danger">Set XSS: img onerror</button>
+        <button id="setXSS2" class="btn-danger">Set XSS: body onload</button>
+        <button id="setXSS3" class="btn-danger">Set XSS: svg onload</button>
+        <button id="deleteValue" class="btn-secondary">Delete Value</button>
+    </div>
+etting a malicious localStorage value.</p>
 <div class="note">
         <strong>Note:</strong> Real cookies require a server. This lab uses <code>localStorage</code> which works 100% without a server and demonstrates the <strong>exact same XSS vulnerability</strong>.
     </div>
@@ -198,6 +199,8 @@ document.getElementById('output').innerHTML = storedValue;</pre>
         <p><strong>Same concept applies to cookies:</strong> Never use <code>innerHTML</code> with untrusted data.</p>
     </div>
 </div>
+
+<p><strong>Goal:</strong> Execute JavaScript by s
 
 <script>
     const vulnerableOutput = document.getElementById('vulnerableOutput');
